@@ -462,7 +462,3 @@ int main(){
     }
 	return 0;
 }
-/*
-g++ -c main.cpp -IC:\Users\tsvet\SFML-2.6.1\include
-g++ main.o -o main -LC:\Users\tsvet\SFML-2.6.1\lib -lsfml-graphics -lsfml-window -lsfml-system -lopengl32 -lwinmm -lgdi32
-*/
