@@ -3,14 +3,14 @@
 ## Requirements
 
 You need:
-- **Downloaded SFML-2.6.1**
-- **g++ compiler**
+- **cmake of version >= 3.29**
 
-## To run the code you should execute both of these compiling commands in the following order:
-- **1) g++ -c main.cpp -I[path to SFML-2.6.1\include]**
-- **2) g++ main.o -o main -L[path to SFML-2.6.1\lib] -lsfml-graphics -lsfml-window -lsfml-system -lopengl32 -lwinmm -lgdi32**
-- Then just start the main.exe file
+## To run the code you should just build it with cmake as usually:
+- Run the following command in the root folder of the project:
+```
+mkdir build && cd build && cmake .. && cmake --build .
+```
+- Then run the program: `start cube_rotation.exe`
 
-## Example:
-- **g++ -c main.cpp -IC:\Users\tsvet\SFML-2.6.1\include**
-- **g++ main.o -o main -LC:\Users\tsvet\SFML-2.6.1\lib -lsfml-graphics -lsfml-window -lsfml-system -lopengl32 -lwinmm -lgdi32**
+## Dependencies
+- [SFML 2.6.1](https://www.sfml-dev.org/) (licensed under zlib/png license)
