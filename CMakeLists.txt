@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.29)
 project(cube_rotation)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 20)
 
 set(SFML_INCLUDE_DIR "${CMAKE_SOURCE_DIR}/SFML-2.6.1/include")
 set(SFML_LIBRARY_DIR "${CMAKE_SOURCE_DIR}/SFML-2.6.1/lib")

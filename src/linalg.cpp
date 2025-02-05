@@ -71,8 +71,8 @@ namespace la{
 	}
 
 	template<>
-	Figure<2> projection2d<2>(Figure<2> &&fig){
-		return std::move(fig);
+	Figure<2> projection2d<2>(Figure<2> &&fig) noexcept {
+		return fig;
 	}
 
 }

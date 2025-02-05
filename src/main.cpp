@@ -59,7 +59,7 @@ void draw_points(sf::Uint8* pixels, la::Figure<2> &fig, int radius = 3) {
     }
 }
 
-void draw_figure2d(sf::Sprite &delta, sf::RenderWindow &window, la::Figure<2> &&fig, const unsigned int N){
+void draw_figure2d(sf::Sprite &delta, sf::RenderWindow &window, la::Figure<2> &&fig, const unsigned int N) noexcept {
 	std::vector<double> direction(2);
 	for(const auto& edge : fig.edges){
 		constexpr unsigned int offsetY = 400;

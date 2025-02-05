@@ -1,12 +1,20 @@
 # How to try this program on your local machine
 
 ## Requirements
+- **CMake (version >= 3.29) or Make**
+- **C++ (version >= 20)**
 
-You need:
-- **cmake of version >= 3.29**
+## Build and Run instructions
+### Using Make:
+- `make all` - build and run
+- `make configure` - generating cmake files in build folder
+- `make build` - build
+- `make run` - run
+- `make clean` - clean build folder
+- `make rebuild` - clean, build and run
 
-## To run the code you should just build it with cmake as usually:
-- Run the following command in the root folder of the project:
+### Using CMake:
+- If you don't have `Make` but have `CMake` run the following command in the root folder of the project:
 ```
 mkdir build && cd build && cmake .. && cmake --build .
 ```

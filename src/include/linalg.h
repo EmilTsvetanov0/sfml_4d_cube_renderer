@@ -220,11 +220,8 @@ namespace la{
 	void generate_texture_circle(sf::Uint8* pixels, unsigned int a, unsigned int b);
 
 	template<int dim>
-	Figure<2> projection2d(la::Figure<dim> &&fig){
-		if(fig.get_dim()<2){
-			sleep(sf::milliseconds(5000));
-			throw std::invalid_argument("projection2d: can't make projection of an object which dim is under 2");
-		}
+	requires (dim >= 2)
+	Figure<2> projection2d(la::Figure<dim> &&fig) noexcept {
 		Figure<2> result(std::move(fig.edges));
 
 		for (auto& point : fig.skel) {
@@ -236,7 +233,7 @@ namespace la{
 	}
 
 	template<>
-	Figure<2> projection2d<2>(Figure<2> &&fig);
+	Figure<2> projection2d<2>(Figure<2> &&fig) noexcept;
 
 }
 
